@@ -1,0 +1,149 @@
+%-------------------------
+% Professional Resume in LaTeX (Strict Black & White, 1 Page)
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.45in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section styling with solid black rule
+\newcommand{\resumesection}[1]{%
+  \vspace{4pt}%
+  {\large\textbf{\uppercase{#1}}}%
+  \vspace{1pt}\hrule height 0.6pt\vspace{3pt}%
+}
+
+% Standard bulleted list
+\newenvironment{resumelist}{%
+  \begin{list}{$\bullet$}{%
+    \setlength{\leftmargin}{1.2em}%
+    \setlength{\itemsep}{1pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{1.5pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{%
+  \end{list}%
+}
+
+% Heading commands (Clean standard typography)
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{2pt}%
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}%
+    \textbf{#1} & #2 \\%
+    \small #3 & \small #4 \\%
+  \end{tabular*}\vspace{-1pt}%
+}
+
+\newcommand{\resumeProjectHeading}[2]{%
+  \vspace{2pt}%
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}%
+    \small#1 & #2 \\%
+  \end{tabular*}\vspace{-1pt}%
+}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Garrett Butchko}} \\ \vspace{2pt}
+    \small Cleveland, OH \ $\vert$ \ 
+    \href{mailto:garrettwm2005@gmail.com}{\underline{garrettwm2005@gmail.com}} \ $\vert$ \ 
+    \href{https://linkedin.com/in/garrettbutchko}{\underline{linkedin.com/in/garrettbutchko}} \ $\vert$ \ 
+    \href{https://github.com/GarrettButchko}{\underline{github.com/GarrettButchko}}
+\end{center}
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\resumesection{Education}
+  \resumeSubheading
+    {Cleveland State University}{Cleveland, OH}
+    {B.S. in Computer Science \& Design \ $\vert$ \ GPA: 3.86}{Expected Summer 2028}
+    \begin{resumelist}
+      \item \small{\textbf{Leadership \& Honors:} Founding President, Upsilon Pi Epsilon (UPE) Honor Society; Student Ambassador to CS Department Chair}
+    \end{resumelist}
+
+  \resumeSubheading
+    {Saint Ignatius High School}{Cleveland, OH}
+    {High School Diploma \ $\vert$ \ GPA: 4.31}{2020 -- 2024}
+    \begin{resumelist}
+      \item \small{\textbf{Athletics \& Leadership:} Varsity Football Captain; Varsity Rugby (3 Years, 1 National Championship, 3 State Championships); Student Council}
+    \end{resumelist}
+
+%-----------TECHNICAL SKILLS-----------
+\resumesection{Technical Skills}
+  \vspace{1pt}
+  \small{
+   \textbf{Languages:} Swift, Kotlin, Dart, Python, TypeScript, JavaScript, Java, C/C++, HTML/CSS, SQL \\
+   \textbf{Frameworks \& Architecture:} SwiftUI, Jetpack Compose, Kotlin Multiplatform (KMP), Flutter, AVFoundation, React, Next.js \\
+   \textbf{Backend \& Cloud:} Firebase (Firestore, Authentication, Cloud Functions), REST APIs, FFmpeg (Libavformat/Libavcodec) \\
+   \textbf{Tools \& Platforms:} Git, GitHub, Xcode, Android Studio, VS Code, Figma, ActivityKit (Live Activities)
+  }
+  \vspace{1pt}
+
+%-----------WORK EXPERIENCE-----------
+\resumesection{Work Experience}
+
+  \resumeSubheading
+    {ADollarClass}{Remote}
+    {Web \& Mobile Application Development Intern}{Jan. 2025 -- May 2025}
+    \begin{resumelist}
+      \item \small{Engineered a full-stack mobile application prototype using Flutter and Firebase, developing key onboarding flows and user features.}
+      \item \small{Architected Cloud Firestore data collections and integrated Firebase Authentication for secure end-to-end user state persistence.}
+    \end{resumelist}
+
+  \resumeSubheading
+    {Lowe's Home Improvement}{Cleveland, OH}
+    {Part-Time Sales Associate}{2024 -- Present}
+    \begin{resumelist}
+      \item \small{Provide consultative customer service by diagnosing DIY and commercial project requirements to recommend suitable materials and tools.}
+      \item \small{Maintain high reliability, inventory organization, and customer satisfaction while balancing a rigorous full-time computer science curriculum.}
+    \end{resumelist}
+
+%-----------PROJECTS-----------
+\resumesection{Projects}
+
+  \resumeProjectHeading
+    {\textbf{JellyBoi} $\vert$ \textnormal{Swift, SwiftUI, AVFoundation, FFmpeg, ActivityKit}}{\small GitHub: \href{https://github.com/GarrettButchko/jellyboi}{\underline{GarrettButchko/jellyboi}}}
+    \begin{resumelist}
+      \item \small{Engineered a native Jellyfin streaming client in SwiftUI for iOS, iPadOS, macOS, tvOS, and visionOS with hardware-accelerated playback.}
+      \item \small{Built an offline media pipeline featuring on-device FFmpeg remuxing (MKV/WebM to MP4) using low-level Libavformat and Libavcodec.}
+      \item \small{Implemented background download management via URLSession, real-time Live Activities with Dynamic Island support, and a ranked search engine.}
+    \end{resumelist}
+
+  \resumeProjectHeading
+    {\textbf{MiniMate} $\vert$ \textnormal{Kotlin Multiplatform, Jetpack Compose, SwiftUI, Next.js, Firebase}}{\small GitHub: \href{https://github.com/GarrettButchko/mini-mate}{\underline{GarrettButchko/mini-mate}}}
+    \begin{resumelist}
+      \item \small{Architected a cross-platform companion app for mini golf venues using Kotlin Multiplatform (KMP), Jetpack Compose, and SwiftUI.}
+      \item \small{Developed real-time digital scorecards, live competitive leaderboards, and multiplayer state synchronization backed by Firebase.}
+      \item \small{Engineered a web-based administrative analytics dashboard in Next.js for venue operators to monitor player stats and custom branding.}
+    \end{resumelist}
+
+%-----------LEADERSHIP & CAMPUS INVOLVEMENT-----------
+\resumesection{Leadership \& Campus Involvement}
+
+  \resumeSubheading
+    {Department of Computer Science}{Cleveland State University}
+    {Student Ambassador to the Department Chair}{2025 -- Present}
+    \begin{resumelist}
+      \item \small{Accompany the Computer Science Department Chair on visits to regional high schools to present on undergraduate curriculum, student projects, and career pathways.}
+      \item \small{Initiate and manage email outreach to high school administrators to introduce the department and coordinate recruitment visits.}
+      \item \small{Serve as primary undergraduate liaison to the Department Chair, communicating student perspectives and assisting in departmental recruitment initiatives.}
+    \end{resumelist}
+
+  \resumeSubheading
+    {Upsilon Pi Epsilon (UPE) International Honor Society}{Cleveland State University}
+    {Founding President (Chapter in Formation)}{2025 -- Present}
+    \begin{resumelist}
+      \item \small{Spearheading the petition, faculty sponsorship, and administrative chartering process to establish a recognized CSU chapter of UPE.}
+      \item \small{Drafting chapter bylaws, organizing initial membership criteria, and preparing the launch framework to recognize top computing students.}
+    \end{resumelist}
+
+\end{document}
